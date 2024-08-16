@@ -50,7 +50,7 @@ examples: |
 
 generation: |
   Here is the document:
-
+  
   [DOCUMENT]
   {document_outline}
   {document}
