@@ -400,9 +400,8 @@ def generate_data(
         logger.debug("Dataset: %s", ds)
         new_generated_data = pipe.generate(ds, leaf_node_path)
         if len(new_generated_data) == 0:
-            raise EmptyDatasetError(
-                "Pipeline stopped: Empty dataset after running pipe"
-            )
+            logger.warning("QNA file produced empt dataset skipping: %s", leaf_node[0]["taxonomy_path"])
+            continue
         generated_data = (
             [new_generated_data]
             if generated_data is None
