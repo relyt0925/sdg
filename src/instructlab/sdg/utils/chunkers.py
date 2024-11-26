@@ -258,7 +258,7 @@ class ContextAwareChunker(ChunkerBase):  # pylint: disable=too-many-instance-att
             artifacts_path=self.docling_model_path,
             do_ocr=False,
         )
-        ocr_options = resolve_ocr_options()
+        ocr_options = None
         if ocr_options is not None:
             pipeline_options.do_ocr = True
             pipeline_options.ocr_options = ocr_options
